@@ -1,0 +1,6 @@
+{
+  "name": "مستخرج الدفاتر اليدوية إلى SQL Server",
+  "description": "تطبيق ذكي لقراءة صور الدفاتر والسجلات اليدوية بالذكاء الاصطناعي وتعيين واستيراد البيانات تلقائياً في جداول SQL Server.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
