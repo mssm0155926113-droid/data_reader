@@ -9,6 +9,7 @@ interface HeaderProps {
   onOpenGuide: () => void;
   onOpenVoiceInput: () => void;
   onOpenFruit67Modal: () => void;
+  onOpenFruit67Workflow: () => void;
   pendingSyncCount?: number;
 }
 
@@ -19,6 +20,7 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenGuide,
   onOpenVoiceInput,
   onOpenFruit67Modal,
+  onOpenFruit67Workflow,
   pendingSyncCount = 0,
 }) => {
   return (
@@ -47,8 +49,18 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
 
-        {/* Right Actions: fruit67 Sync, Voice Input, Guide, SQL Server Status */}
+        {/* Right Actions: fruit67 Workflow Model, Sync, Voice Input, Guide, SQL Server Status */}
         <div className="flex items-center gap-2 sm:gap-3">
+          {/* Fruit67 Workflow Model Button */}
+          <button
+            onClick={onOpenFruit67Workflow}
+            className="flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-white bg-gradient-to-r from-amber-600 via-orange-600 to-emerald-600 hover:from-amber-500 hover:to-emerald-500 rounded-lg shadow-md shadow-amber-600/20 border border-amber-400/40 transition-all cursor-pointer ring-1 ring-amber-400/30"
+            title="نموذج تدفق الإدخال الصوتي وجداول قاعدة بيانات fruit67 (fatora_f والمبيعات)"
+          >
+            <Layers className="w-4 h-4 text-amber-200" />
+            <span>نموذج الجداول والصوت 📊</span>
+          </button>
+
           {/* fruit67 Sync Button */}
           <button
             onClick={onOpenFruit67Modal}

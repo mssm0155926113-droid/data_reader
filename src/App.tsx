@@ -9,6 +9,7 @@ import { SqlServerModal } from './components/SqlServerModal';
 import { GuideModal } from './components/GuideModal';
 import { VoiceInputModal } from './components/VoiceInputModal';
 import { Fruit67SyncModal } from './components/Fruit67SyncModal';
+import { Fruit67WorkflowModel } from './components/Fruit67WorkflowModel';
 import { PRESET_LEDGERS } from './data/presetLedgers';
 import { FRUIT67_TABLES } from './data/fruit67Database';
 import { ExtractedRow, ExtractionResult, SqlServerConfig, TableDefinition } from './types/ledger';
@@ -46,6 +47,7 @@ export default function App() {
   const [isGuideModalOpen, setIsGuideModalOpen] = useState(false);
   const [isVoiceModalOpen, setIsVoiceModalOpen] = useState(false);
   const [isFruit67ModalOpen, setIsFruit67ModalOpen] = useState(false);
+  const [isFruit67WorkflowOpen, setIsFruit67WorkflowOpen] = useState(false);
   const [pendingSyncCount, setPendingSyncCount] = useState<number>(0);
 
   // Load saved config on mount
@@ -331,11 +333,44 @@ export default function App() {
         onOpenGuide={() => setIsGuideModalOpen(true)}
         onOpenVoiceInput={() => setIsVoiceModalOpen(true)}
         onOpenFruit67Modal={() => setIsFruit67ModalOpen(true)}
+        onOpenFruit67Workflow={() => setIsFruit67WorkflowOpen(true)}
         pendingSyncCount={pendingSyncCount}
       />
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+        {/* Special Fruit67 Voice Ingest & Tables Model Banner */}
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-amber-950/70 via-emerald-950/50 to-slate-900 border border-amber-500/30 p-5 shadow-xl">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="space-y-1.5">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                  قاعدة بيانات fruit67 - وكالات وأسواق الفاكهة
+                </span>
+                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+                  ★ جدول المبيعات المعتمد: fatora_f
+                </span>
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-white">
+                نموذج تدفق الإدخال الصوتي وتسكين النقلات والمبيعات عبر الجداول
+              </h3>
+              <p className="text-xs text-slate-300 max-w-3xl leading-relaxed">
+                مسار ذكي للتحقق من المورد والمزرعة، تسجيل النقلة مع نولون الشحن ووهبة السائق، احتساب كود الصنف الجديد (MAX+1) وبياعته العادية والخاصة، وتسكين المبيعات في جدول <strong>fatora_f</strong> (نقدي أو زمام) مع إضافة العميل وترحيل المديونية تلقائياً إلى جدول <strong>zemam</strong>.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                onClick={() => setIsFruit67WorkflowOpen(true)}
+                className="flex items-center gap-2 px-4 py-2.5 text-xs font-bold text-slate-950 bg-gradient-to-r from-amber-400 to-amber-300 hover:from-amber-300 hover:to-amber-200 rounded-xl transition-all shadow-lg shadow-amber-500/20 cursor-pointer"
+              >
+                <Layers className="w-4 h-4 text-slate-950" />
+                <span>فتح نموذج الجداول ومسار الصوت 📊</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* Banner Announcement */}
         <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-sky-950/60 via-indigo-950/40 to-slate-900 border border-indigo-500/20 p-5 shadow-lg">
           <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -561,6 +596,7 @@ export default function App() {
         tableSchema={tableSchema}
         onAddRow={handleAddVoiceRow}
         onSyncColumnsIfNeeded={handleSyncColumnsForVoice}
+        onOpenFruit67Workflow={() => setIsFruit67WorkflowOpen(true)}
       />
 
       <SqlServerModal
@@ -600,6 +636,11 @@ export default function App() {
         activeTableName={tableSchema.name}
         sqlConfig={sqlConfig}
         onSaveSqlConfig={handleSaveConfig}
+      />
+
+      <Fruit67WorkflowModel
+        isOpen={isFruit67WorkflowOpen}
+        onClose={() => setIsFruit67WorkflowOpen(false)}
       />
     </div>
   );

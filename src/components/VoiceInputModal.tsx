@@ -26,6 +26,7 @@ interface VoiceInputModalProps {
   tableSchema: TableDefinition;
   onAddRow: (newRow: ExtractedRow) => void;
   onSyncColumnsIfNeeded: () => void;
+  onOpenFruit67Workflow?: () => void;
 }
 
 export const VoiceInputModal: React.FC<VoiceInputModalProps> = ({
@@ -34,6 +35,7 @@ export const VoiceInputModal: React.FC<VoiceInputModalProps> = ({
   tableSchema,
   onAddRow,
   onSyncColumnsIfNeeded,
+  onOpenFruit67Workflow,
 }) => {
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState('');
@@ -52,13 +54,14 @@ export const VoiceInputModal: React.FC<VoiceInputModalProps> = ({
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
 
-  // Sample phrases for quick testing
+  // Sample phrases for quick testing (General Ledger & Wholesale Fruit Market)
   const SAMPLE_VOICE_PHRASES = [
+    'سجل نقلة عنب بناتي من المورد المعلم فوزي رضوان مزرعة الإسماعيلية 1 نولون 500 وهبة 50 صنف عنب بناتي أصفر عدد 120 قفص وزن 1800 كيلو بسعر 35 نقدي للعميل فتحي',
+    'نقلة مانجو عويس من المعلم فوزي مزرعة الإسماعيلية نولون 700 وهبة 100 صنف مانجو عويس جديد عدد 150 وزن 2250 بسعر 50 زمام للعميل عماد الطوخي',
     'العدد 40 والوزن 12 طن ونص والاسم الحاج محمود عاشور والسعر 3500 واسم النقلة نقلة رمل أحمر مباني',
     'نقلة سن 2 خرسانة الاسم شركة المقاولون العرب العدد 25 والوزن 8 طن والسعر 2800 جنيه',
     'سجل نقلة حديد تسليح 12 مم لعميل رمضان الدسوقي العدد 10 والوزن 15 طن والسعر 18500',
     'نقلة أسمنت بورتلاندي العدد 100 شيكارة الوزن 5 طن الاسم مؤسسة السلام السعر 4200',
-    'اكتب نقلة طوب أحمر دبل، الاسم أحمد سامي النجار، العدد 5000 طوبة، الوزن 9 طن و 200 كيلو، والسعر 6500 جنيه',
   ];
 
   // Initialize Speech Recognition if supported
@@ -261,6 +264,28 @@ export const VoiceInputModal: React.FC<VoiceInputModalProps> = ({
 
         {/* Modal Body */}
         <div className="p-6 overflow-y-auto space-y-5 text-right">
+          {/* fruit67 Relational Workflow Shortcut */}
+          {onOpenFruit67Workflow && (
+            <div className="p-3.5 rounded-xl bg-gradient-to-r from-amber-950/60 via-slate-900 to-emerald-950/50 border border-amber-500/30 flex flex-wrap items-center justify-between gap-3 shadow-md">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />
+                <span className="text-xs text-amber-200">
+                  هل تريد إدخال نقلة متعددة الأصناف والمبيعات مع ترحيل <strong className="text-emerald-300">fatora_f والذمم</strong>؟
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  onClose();
+                  onOpenFruit67Workflow();
+                }}
+                className="px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 transition shrink-0 cursor-pointer shadow"
+              >
+                فتح نموذج الجداول المتقدم ➔
+              </button>
+            </div>
+          )}
+
           {/* Main Voice Activation Area */}
           <div className={`relative p-6 rounded-2xl border text-center transition-all ${
             isListening

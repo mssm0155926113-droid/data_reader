@@ -1,1 +1,845 @@
-[]
+[
+  {
+    "id": "f67-sup-1",
+    "tableName": "suppliers",
+    "data": {
+      "sup_id": 1,
+      "sup_name": "المعلم فوزي رضوان",
+      "sup_address": "الإسماعيلية - طريق القنطرة",
+      "sup_mobile": "01001234567",
+      "hold": 0,
+      "comission": 0.05
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-sup-2",
+    "tableName": "suppliers",
+    "data": {
+      "sup_id": 2,
+      "sup_name": "الحاج سالم عبد الحميد",
+      "sup_address": "البحيرة - وادي النطرون",
+      "sup_mobile": "01119876543",
+      "hold": 0,
+      "comission": 0.05
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-farm-1",
+    "tableName": "farm",
+    "data": {
+      "farm_id": 1,
+      "sup_name": "المعلم فوزي رضوان",
+      "farm_name": "مزرعة الإسماعيلية 1",
+      "hold": 0
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-farm-2",
+    "tableName": "farm",
+    "data": {
+      "farm_id": 2,
+      "sup_name": "الحاج سالم عبد الحميد",
+      "farm_name": "مزرعة النوبارية والبحيرة",
+      "hold": 0
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-cat-101",
+    "tableName": "category",
+    "data": {
+      "id": 1,
+      "cat_name": "موز بلدي فاخر",
+      "cat_code": 101,
+      "byaaa": 2,
+      "byaaa_s": 1,
+      "hold": 0
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-cat-102",
+    "tableName": "category",
+    "data": {
+      "id": 2,
+      "cat_name": "عنب بناتي أصفر",
+      "cat_code": 102,
+      "byaaa": 2.5,
+      "byaaa_s": 1.25,
+      "hold": 0
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-cat-103",
+    "tableName": "category",
+    "data": {
+      "id": 3,
+      "cat_name": "مانجو عويس ممتاز",
+      "cat_code": 103,
+      "byaaa": 3,
+      "byaaa_s": 1.5,
+      "hold": 0
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-cust-201",
+    "tableName": "customers",
+    "data": {
+      "customer_id": 1,
+      "customer_code": 201,
+      "customer_name": "المعلم فتحي البقال",
+      "customer_address": "سوق الجملة - باكية 12",
+      "customer_mobile": "01223456789",
+      "hold": 0,
+      "special": 0,
+      "byaaa_c_s": 0
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-cust-202",
+    "tableName": "customers",
+    "data": {
+      "customer_id": 2,
+      "customer_code": 202,
+      "customer_name": "طارق الصعيدي",
+      "customer_address": "شبرا الخيمة",
+      "customer_mobile": "01551234888",
+      "hold": 0,
+      "special": 0,
+      "byaaa_c_s": 0
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-nakla-1",
+    "tableName": "nakla",
+    "data": {
+      "nakla_id": 101,
+      "nakla_number": 101,
+      "sup_name": "الحاج سالم عبد الحميد",
+      "farm_name": "مزرعة النوبارية والبحيرة",
+      "nakla_name": "نقلة موز 101",
+      "nakla_weight": 4500,
+      "sobata_number": 180,
+      "nakla_date": "2026-10-15",
+      "wahba": 100,
+      "comission": 0.05,
+      "byaaa": 2,
+      "tanzil": 300,
+      "nakla_finish": 0,
+      "nakla_sarf": 0,
+      "printed": 1
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-ncat-1",
+    "tableName": "nakla_cat",
+    "data": {
+      "id": 1,
+      "sup_name": "الحاج سالم عبد الحميد",
+      "farm_name": "مزرعة النوبارية والبحيرة",
+      "nakla_name": "نقلة موز 101",
+      "cat_id": 101,
+      "cat_name": "موز بلدي فاخر",
+      "cat_number": 180,
+      "cat_byaaa": 2,
+      "cat_byaaa_s": 1,
+      "pack_id": 1,
+      "pack_rahn": 0
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-fat-1",
+    "tableName": "fatora_f",
+    "data": {
+      "id": 1,
+      "nakla_id": 101,
+      "nakla_name": "نقلة موز 101",
+      "sup_name": "الحاج سالم عبد الحميد",
+      "farm_name": "مزرعة النوبارية والبحيرة",
+      "cat_id": 101,
+      "cat_name": "موز بلدي فاخر",
+      "sobata_num": 40,
+      "package_unit": "سباطة",
+      "t_weight": 1000,
+      "net_weight": 1000,
+      "price": 28,
+      "totally": 28000,
+      "cash": 1,
+      "customer_name": "المعلم فتحي البقال",
+      "customer_code": 201,
+      "byaaa": 2,
+      "trans_date": "2026-10-15",
+      "rahn_case": 0,
+      "rahn": 0,
+      "t_rahn": 0,
+      "tota": 28000
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-zem-1",
+    "tableName": "zemam",
+    "data": {
+      "id": 1,
+      "nakla_id": 101,
+      "nakla_name": "نقلة موز 101",
+      "customer_name": "طارق الصعيدي",
+      "customer_code": 202,
+      "zemam": 15000,
+      "trans_date": "2026-10-15",
+      "tota": 15000,
+      "safi_zemam": 15000,
+      "samah": 0,
+      "tahseel": 0,
+      "rahn": 0,
+      "rahn_pay": 0,
+      "safi_rahn": 0,
+      "rahn_pay_type": 0
+    },
+    "syncStatus": "synced",
+    "createdAt": "2026-10-22T09:09:03.804Z",
+    "syncedAt": "2026-10-22T09:09:03.804Z"
+  },
+  {
+    "id": "f67-nakla-1792660335637",
+    "tableName": "nakla",
+    "data": {
+      "nakla_id": 102,
+      "nakla_number": 106,
+      "sup_name": "المعلم فوزي رضوان",
+      "farm_name": "مزرعة الإسماعيلية 1",
+      "nakla_name": "نقلة عنب بناتي",
+      "nakla_weight": 1800,
+      "sobata_number": 120,
+      "nakla_date": "2026-10-22",
+      "wahba": 50,
+      "comission": 0.05,
+      "byaaa": 2,
+      "tanzil": 0,
+      "nakla_finish": 0,
+      "nakla_sarf": 0,
+      "printed": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:12:15.637Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-nexp-nawloon-1792660335637",
+    "tableName": "nakla_exps",
+    "data": {
+      "id": 335637,
+      "nakla_name": "نقلة عنب بناتي",
+      "exp_name": "نولون",
+      "exp_amount": 500,
+      "exp_date": "2026-10-22"
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:12:15.637Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-nexp-wahba-1792660335637",
+    "tableName": "nakla_exps",
+    "data": {
+      "id": 335638,
+      "nakla_name": "نقلة عنب بناتي",
+      "exp_name": "وهبة",
+      "exp_amount": 50,
+      "exp_date": "2026-10-22"
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:12:15.637Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-ncat-1792660335638-102",
+    "tableName": "nakla_cat",
+    "data": {
+      "id": 335638,
+      "sup_name": "المعلم فوزي رضوان",
+      "farm_name": "مزرعة الإسماعيلية 1",
+      "nakla_name": "نقلة عنب بناتي",
+      "cat_id": 102,
+      "cat_name": "عنب بناتي أصفر",
+      "cat_number": 120,
+      "cat_byaaa": 2.5,
+      "cat_byaaa_s": 1.25,
+      "pack_id": 1,
+      "pack_rahn": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:12:15.637Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-fatora-1792660335638-602",
+    "tableName": "fatora_f",
+    "data": {
+      "id": 660336428,
+      "nakla_id": 102,
+      "sobata_num": 30,
+      "cat_id": 102,
+      "cat_name": "عنب بناتي أصفر",
+      "package_unit": "سباطة / قفص",
+      "t_weight": 450,
+      "samah_weight": 0,
+      "net_weight": 450,
+      "price": 35,
+      "totally": 15750,
+      "cash": 1,
+      "customer_name": "المعلم فتحي البقال",
+      "trans_date": "2026-10-22",
+      "sup_name": "المعلم فوزي رضوان",
+      "farm_name": "مزرعة الإسماعيلية 1",
+      "nakla_name": "نقلة عنب بناتي",
+      "byaaa": 2.5,
+      "rahn_case": 0,
+      "rahn": 0,
+      "t_rahn": 0,
+      "tota": 15750,
+      "customer_code": 201
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:12:15.637Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-cust-203-1792660335638",
+    "tableName": "customers",
+    "data": {
+      "customer_id": 3,
+      "customer_code": 203,
+      "customer_name": "عماد الطوخي",
+      "customer_address": "سوق الجملة",
+      "customer_mobile": "",
+      "hold": 0,
+      "special": 0,
+      "byaaa_c_s": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:12:15.637Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-fatora-1792660335638-584",
+    "tableName": "fatora_f",
+    "data": {
+      "id": 660335652,
+      "nakla_id": 102,
+      "sobata_num": 40,
+      "cat_id": 102,
+      "cat_name": "عنب بناتي أصفر",
+      "package_unit": "سباطة / قفص",
+      "t_weight": 600,
+      "samah_weight": 0,
+      "net_weight": 600,
+      "price": 35,
+      "totally": 21000,
+      "cash": 0,
+      "customer_name": "عماد الطوخي",
+      "trans_date": "2026-10-22",
+      "sup_name": "المعلم فوزي رضوان",
+      "farm_name": "مزرعة الإسماعيلية 1",
+      "nakla_name": "نقلة عنب بناتي",
+      "byaaa": 2.5,
+      "rahn_case": 0,
+      "rahn": 0,
+      "t_rahn": 0,
+      "tota": 21000,
+      "customer_code": 203
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:12:15.637Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-zemam-1792660335638-214",
+    "tableName": "zemam",
+    "data": {
+      "id": 660336320,
+      "nakla_id": 102,
+      "customer_name": "عماد الطوخي",
+      "zemam": 21000,
+      "samah": 0,
+      "tahseel": 0,
+      "trans_date": "2026-10-22",
+      "safi_zemam": 21000,
+      "nakla_name": "نقلة عنب بناتي",
+      "rahn": 0,
+      "rahn_pay": 0,
+      "tota": 21000,
+      "safi_rahn": 0,
+      "rahn_pay_type": 0,
+      "customer_code": 203
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:12:15.637Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-nakla-1792660611613",
+    "tableName": "nakla",
+    "data": {
+      "nakla_id": 103,
+      "nakla_number": 106,
+      "sup_name": "المعلم فوزي رضوان",
+      "farm_name": "مزرعة الإسماعيلية 1",
+      "nakla_name": "نقلة مانجو عويس",
+      "nakla_weight": 1800,
+      "sobata_number": 120,
+      "nakla_date": "2026-10-22",
+      "wahba": 100,
+      "comission": 0.05,
+      "byaaa": 2,
+      "tanzil": 0,
+      "nakla_finish": 0,
+      "nakla_sarf": 0,
+      "printed": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:16:51.613Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-nexp-nawloon-1792660611613",
+    "tableName": "nakla_exps",
+    "data": {
+      "id": 611613,
+      "nakla_name": "نقلة مانجو عويس",
+      "exp_name": "نولون",
+      "exp_amount": 700,
+      "exp_date": "2026-10-22"
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:16:51.613Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-nexp-wahba-1792660611613",
+    "tableName": "nakla_exps",
+    "data": {
+      "id": 611614,
+      "nakla_name": "نقلة مانجو عويس",
+      "exp_name": "وهبة",
+      "exp_amount": 100,
+      "exp_date": "2026-10-22"
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:16:51.613Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-cat-104-1792660611613",
+    "tableName": "category",
+    "data": {
+      "id": 4,
+      "cat_name": "مانجو عويس ممتاز",
+      "cat_code": 104,
+      "byaaa": 3,
+      "byaaa_s": 1.5,
+      "hold": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:16:51.613Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-ncat-1792660611613-104",
+    "tableName": "nakla_cat",
+    "data": {
+      "id": 611613,
+      "sup_name": "المعلم فوزي رضوان",
+      "farm_name": "مزرعة الإسماعيلية 1",
+      "nakla_name": "نقلة مانجو عويس",
+      "cat_id": 104,
+      "cat_name": "مانجو عويس ممتاز",
+      "cat_number": 120,
+      "cat_byaaa": 3,
+      "cat_byaaa_s": 1.5,
+      "pack_id": 1,
+      "pack_rahn": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:16:51.613Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-cust-204-1792660611613",
+    "tableName": "customers",
+    "data": {
+      "customer_id": 4,
+      "customer_code": 204,
+      "customer_name": "أحمد الشامي",
+      "customer_address": "سوق الجملة",
+      "customer_mobile": "",
+      "hold": 0,
+      "special": 0,
+      "byaaa_c_s": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:16:51.613Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-fatora-1792660611613-452",
+    "tableName": "fatora_f",
+    "data": {
+      "id": 660612139,
+      "nakla_id": 103,
+      "sobata_num": 50,
+      "cat_id": 104,
+      "cat_name": "مانجو عويس ممتاز",
+      "package_unit": "سباطة / قفص",
+      "t_weight": 750,
+      "samah_weight": 0,
+      "net_weight": 750,
+      "price": 55,
+      "totally": 41250,
+      "cash": 1,
+      "customer_name": "أحمد الشامي",
+      "trans_date": "2026-10-22",
+      "sup_name": "المعلم فوزي رضوان",
+      "farm_name": "مزرعة الإسماعيلية 1",
+      "nakla_name": "نقلة مانجو عويس",
+      "byaaa": 3,
+      "rahn_case": 0,
+      "rahn": 0,
+      "t_rahn": 0,
+      "tota": 41250,
+      "customer_code": 204
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:16:51.613Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-sup-1792661382132",
+    "tableName": "suppliers",
+    "data": {
+      "sup_id": 3,
+      "sup_name": "أحمد جابر",
+      "sup_address": "سوق الجملة المركزي",
+      "sup_mobile": "",
+      "hold": 0,
+      "comission": 0.05
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:29:42.130Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-farm-1792661382132",
+    "tableName": "farm",
+    "data": {
+      "farm_id": 3,
+      "sup_name": "أحمد جابر",
+      "farm_name": "أحمد جابر",
+      "hold": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:29:42.130Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-cat-105-1792661382148",
+    "tableName": "category",
+    "data": {
+      "id": 5,
+      "cat_name": "مانجو فص",
+      "cat_code": 105,
+      "byaaa": 3,
+      "byaaa_s": 1.5,
+      "hold": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:29:42.147Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-nakla-1792661382155",
+    "tableName": "nakla",
+    "data": {
+      "nakla_id": 104,
+      "nakla_number": 1,
+      "sup_name": "أحمد جابر",
+      "farm_name": "أحمد جابر",
+      "nakla_name": "أحمد جابر 1",
+      "nakla_weight": 1800,
+      "sobata_number": 120,
+      "nakla_date": "2026-10-22",
+      "wahba": 50,
+      "comission": 0.05,
+      "byaaa": 2,
+      "tanzil": 0,
+      "nakla_finish": 0,
+      "nakla_sarf": 0,
+      "printed": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:29:42.153Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-nexp-nawloon-1792661382155",
+    "tableName": "nakla_exps",
+    "data": {
+      "id": 382155,
+      "nakla_name": "أحمد جابر 1",
+      "exp_name": "نولون",
+      "exp_amount": 500,
+      "exp_date": "2026-10-22"
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:29:42.153Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-nexp-wahba-1792661382155",
+    "tableName": "nakla_exps",
+    "data": {
+      "id": 382156,
+      "nakla_name": "أحمد جابر 1",
+      "exp_name": "وهبة",
+      "exp_amount": 50,
+      "exp_date": "2026-10-22"
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:29:42.153Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-ncat-1792661382155-105",
+    "tableName": "nakla_cat",
+    "data": {
+      "id": 382155,
+      "sup_name": "أحمد جابر",
+      "farm_name": "أحمد جابر",
+      "nakla_name": "أحمد جابر 1",
+      "cat_id": 105,
+      "cat_name": "مانجو فص",
+      "cat_number": 120,
+      "cat_byaaa": 3,
+      "cat_byaaa_s": 1.5,
+      "pack_id": 1,
+      "pack_rahn": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:29:42.153Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-nakla-1792661382160",
+    "tableName": "nakla",
+    "data": {
+      "nakla_id": 105,
+      "nakla_number": 2,
+      "sup_name": "أحمد جابر",
+      "farm_name": "أحمد جابر",
+      "nakla_name": "أحمد جابر 2",
+      "nakla_weight": 1800,
+      "sobata_number": 120,
+      "nakla_date": "2026-10-22",
+      "wahba": 0,
+      "comission": 0.05,
+      "byaaa": 2,
+      "tanzil": 0,
+      "nakla_finish": 0,
+      "nakla_sarf": 0,
+      "printed": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:29:42.159Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-ncat-1792661382160-105",
+    "tableName": "nakla_cat",
+    "data": {
+      "id": 382160,
+      "sup_name": "أحمد جابر",
+      "farm_name": "أحمد جابر",
+      "nakla_name": "أحمد جابر 2",
+      "cat_id": 105,
+      "cat_name": "مانجو فص",
+      "cat_number": 120,
+      "cat_byaaa": 3,
+      "cat_byaaa_s": 1.5,
+      "pack_id": 1,
+      "pack_rahn": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:29:42.159Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-fatora-1792661382166-240",
+    "tableName": "fatora_f",
+    "data": {
+      "id": 661382726,
+      "nakla_id": 101,
+      "sobata_num": 30,
+      "cat_id": 105,
+      "cat_name": "مانجو فص",
+      "package_unit": "قفص / سباطة",
+      "t_weight": 450,
+      "samah_weight": 0,
+      "net_weight": 450,
+      "price": 40,
+      "totally": 18000,
+      "cash": 1,
+      "customer_name": "عميل نقدي",
+      "trans_date": "2026-10-22",
+      "sup_name": "أحمد جابر",
+      "farm_name": "أحمد جابر",
+      "nakla_name": "أحمد جابر 1",
+      "byaaa": 3,
+      "rahn_case": 0,
+      "rahn": 0,
+      "t_rahn": 0,
+      "tota": 18000,
+      "customer_code": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:29:42.165Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-fatora-1792661439551-298",
+    "tableName": "fatora_f",
+    "data": {
+      "id": 661440250,
+      "nakla_id": 101,
+      "sobata_num": 30,
+      "cat_id": 104,
+      "cat_name": "مانجو فص",
+      "package_unit": "قفص / سباطة",
+      "t_weight": 450,
+      "samah_weight": 0,
+      "net_weight": 450,
+      "price": 40,
+      "totally": 18000,
+      "cash": 1,
+      "customer_name": "عميل نقدي",
+      "trans_date": "2026-10-22",
+      "sup_name": "أحمد جابر",
+      "farm_name": "أحمد جابر",
+      "nakla_name": "أحمد جابر 1",
+      "byaaa": 3,
+      "rahn_case": 0,
+      "rahn": 0,
+      "t_rahn": 0,
+      "tota": 18000,
+      "customer_code": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:30:39.547Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-cust-205-1792661439551",
+    "tableName": "customers",
+    "data": {
+      "customer_id": 5,
+      "customer_code": 205,
+      "customer_name": "عماد الطوخي",
+      "customer_address": "سوق الجملة",
+      "customer_mobile": "",
+      "hold": 0,
+      "special": 0,
+      "byaaa_c_s": 0
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:30:39.547Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-fatora-1792661439551-482",
+    "tableName": "fatora_f",
+    "data": {
+      "id": 661440014,
+      "nakla_id": 101,
+      "sobata_num": 40,
+      "cat_id": 104,
+      "cat_name": "مانجو فص",
+      "package_unit": "قفص / سباطة",
+      "t_weight": 600,
+      "samah_weight": 0,
+      "net_weight": 600,
+      "price": 40,
+      "totally": 24000,
+      "cash": 0,
+      "customer_name": "عماد الطوخي",
+      "trans_date": "2026-10-22",
+      "sup_name": "أحمد جابر",
+      "farm_name": "أحمد جابر",
+      "nakla_name": "أحمد جابر 1",
+      "byaaa": 3,
+      "rahn_case": 0,
+      "rahn": 0,
+      "t_rahn": 0,
+      "tota": 24000,
+      "customer_code": 205
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:30:39.547Z",
+    "syncedAt": null
+  },
+  {
+    "id": "f67-zemam-1792661439551-312",
+    "tableName": "zemam",
+    "data": {
+      "id": 661439668,
+      "nakla_id": 101,
+      "customer_name": "عماد الطوخي",
+      "zemam": 24000,
+      "samah": 0,
+      "tahseel": 0,
+      "trans_date": "2026-10-22",
+      "safi_zemam": 24000,
+      "nakla_name": "أحمد جابر 1",
+      "rahn": 0,
+      "rahn_pay": 0,
+      "tota": 24000,
+      "safi_rahn": 0,
+      "rahn_pay_type": 0,
+      "customer_code": 205
+    },
+    "syncStatus": "pending",
+    "createdAt": "2026-10-22T09:30:39.547Z",
+    "syncedAt": null
+  }
+]

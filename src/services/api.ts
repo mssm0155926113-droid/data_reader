@@ -239,3 +239,86 @@ export async function generateFruit67SyncScript(tableName?: string, onlyPending:
   });
   return await res.json();
 }
+
+export async function fetchFruit67TableRecords(): Promise<{
+  success: boolean;
+  tables: Record<string, any[]>;
+  counts: Record<string, number>;
+}> {
+  const res = await fetch('/api/fruit67/table-records');
+  return await res.json();
+}
+
+export async function voiceStepIngestFruit67(params: {
+  step: 'supplier_farm' | 'category' | 'nakla' | 'sales' | 'all';
+  spokenText?: string;
+  audioBase64?: string;
+  mimeType?: string;
+  context?: {
+    supplierName?: string;
+    farmName?: string;
+    naklaName?: string;
+    catName?: string;
+    catCode?: number;
+    byaaa?: number;
+    byaaaKhassa?: number;
+  };
+}): Promise<{
+  success: boolean;
+  step?: string;
+  summary?: string;
+  transcript?: string;
+  stepLogs?: string[];
+  recordsAddedCount?: number;
+  tablesAffected?: string[];
+  tSqlScript?: string;
+  supplierName?: string;
+  farmName?: string;
+  catName?: string;
+  catCode?: number;
+  byaaa?: number;
+  byaaaKhassa?: number;
+  naklaName?: string;
+  sequenceNumber?: number;
+  error?: string;
+}> {
+  const res = await fetch('/api/fruit67/voice-step-ingest', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(params),
+  });
+  return await res.json();
+}
+
+export async function voiceIngestFruit67(params: {
+  spokenText?: string;
+  audioBase64?: string;
+  mimeType?: string;
+}): Promise<{
+  success: boolean;
+  summary?: string;
+  transcript?: string;
+  stepLogs?: string[];
+  recordsAddedCount?: number;
+  tablesAffected?: string[];
+  tSqlScript?: string;
+  error?: string;
+}> {
+  const res = await fetch('/api/fruit67/voice-step-ingest', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ...params, step: 'all' }),
+  });
+  return await res.json();
+}
+
+export async function resetFruit67Store(): Promise<{
+  success: boolean;
+  message: string;
+  recordsCount: number;
+}> {
+  const res = await fetch('/api/fruit67/reset-store', {
+    method: 'POST',
+  });
+  return await res.json();
+}
